@@ -3,11 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Checking out the code from repository...'
+                echo 'Creating virtual environment and installing dependencies...'
                 sh '''
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install -r Requirements.txt
+                    python3 --version
+                    pip3 --version
+                    pytest --version
                 '''
             }
         }
