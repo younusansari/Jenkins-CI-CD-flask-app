@@ -15,9 +15,13 @@ pipeline {
             }
         }
  
-        stage('install') {
+        stage('Testing') {
             steps {
-                echo 'Installing the application...'
+                echo 'Running Unit Tests...'
+                sh '''
+                    . venv/bin/activate
+                    pytest
+                '''
             }
         }
  
