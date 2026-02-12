@@ -1,5 +1,12 @@
 pipeline {
     agent any // Tells Jenkins where to run the pipeline
+
+    triggers {
+        // Trigger the pipeline on every push to the repository
+       githubPush()
+    }
+
+
     stages {
         stage('build') {
             steps {
