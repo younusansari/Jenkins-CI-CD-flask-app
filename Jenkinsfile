@@ -5,8 +5,7 @@ pipeline {
         // Trigger the pipeline on every push to the repository
        githubPush()
     }
-
-
+ 
     stages {
         stage('build') {
             steps {
