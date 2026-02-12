@@ -8,9 +8,7 @@ pipeline {
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install -r Requirements.txt
-                    python3 --version
-                    pip3 --version
-                    pytest --version
+                    
                 '''
             }
         }
